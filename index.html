@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -171,6 +170,25 @@ img { max-width: 100%; display: block; }
 .hero__inner { max-width: 620px; }
 .section { padding: 90px var(--pad); }
 .section.alt { background: var(--surface-alt); }
+
+/* =========================================================
+   PER-SECTION SUBTLE COLOR RHYTHM — each section gets a faint,
+   differently-positioned accent-tinted wash so the page doesn't
+   read as one flat block of color while scrolling. Derived from
+   the active theme's --accent, so it stays correct across
+   Amber/Steel/Forest/Mono without introducing off-theme hues.
+========================================================= */
+.section { background-repeat: no-repeat; }
+#resume       { background-image: radial-gradient(ellipse 900px 500px at 85% -10%, color-mix(in srgb, var(--accent) 6%, transparent), transparent); }
+#about        { background-image: radial-gradient(ellipse 800px 500px at -10% 0%, color-mix(in srgb, var(--accent) 5%, transparent), transparent); }
+#journey      { background-image: radial-gradient(ellipse 900px 500px at 100% 100%, color-mix(in srgb, var(--accent) 6%, transparent), transparent); }
+#skills       { background-image: radial-gradient(ellipse 800px 600px at 0% 100%, color-mix(in srgb, var(--accent) 5%, transparent), transparent); }
+#projects     { background-image: radial-gradient(ellipse 1000px 600px at 50% 0%, color-mix(in srgb, var(--accent) 6%, transparent), transparent); }
+#timeline     { background-image: radial-gradient(ellipse 800px 600px at 100% 0%, color-mix(in srgb, var(--accent) 5%, transparent), transparent); }
+#certificates { background-image: radial-gradient(ellipse 900px 500px at 50% 100%, color-mix(in srgb, var(--accent) 6%, transparent), transparent); }
+#leadership   { background-image: radial-gradient(ellipse 900px 500px at 0% 0%, color-mix(in srgb, var(--accent) 6%, transparent), transparent); }
+#mentors      { background-image: radial-gradient(ellipse 800px 500px at 100% 50%, color-mix(in srgb, var(--accent) 5%, transparent), transparent); }
+#contact      { background-image: radial-gradient(ellipse 1100px 700px at 50% 50%, color-mix(in srgb, var(--accent) 7%, transparent), transparent); }
 .section__inner { max-width: var(--max-w); margin: 0 auto; }
 .section__title { font-size: clamp(1.6rem, 3.2vw, 2.2rem); margin-bottom: 12px; max-width: 600px; }
 .section__note { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 36px; max-width: 560px; }
@@ -669,8 +687,8 @@ img { max-width: 100%; display: block; }
 <section class="stats-strip">
   <div class="stats-strip__inner">
     <div class="stat reveal"><span class="stat__num" data-count="3">0</span><span class="stat__label">Projects</span></div>
-    <div class="stat reveal"><span class="stat__num" data-count="5">0</span><span class="stat__label">Certifications</span></div>
-    <div class="stat reveal"><span class="stat__num" data-count="4">0</span><span class="stat__label">Hackathons &amp; Competitions</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="7">0</span><span class="stat__label">Certifications</span></div>
+    <div class="stat reveal"><span class="stat__num" data-count="5">0</span><span class="stat__label">Hackathons &amp; Competitions</span></div>
     <div class="stat reveal"><span class="stat__num" data-count="4">0</span><span class="stat__label">AI/ML Focus Areas</span></div>
   </div>
 </section>
@@ -919,6 +937,19 @@ img { max-width: 100%; display: block; }
       <div class="card exp-item reveal">
         <div class="exp-item__meta">
           <span class="tag tag--accent">Leadership</span>
+          <span class="exp-item__date">Ongoing</span>
+        </div>
+        <h3>Team Tinkerers' Lab — Event Coordinator</h3>
+        <p class="exp-item__org">Sanjivani University Tinkerers' Lab, Kopargaon</p>
+        <ul class="exp-item__bullets">
+          <li>Core team member (Event Coordinator) of a 10-person Event Management Team for the university's Tinkerers' Lab</li>
+          <li>Helps plan and run orientation sessions and innovation showcases held at the Lab</li>
+        </ul>
+      </div>
+
+      <div class="card exp-item reveal">
+        <div class="exp-item__meta">
+          <span class="tag tag--accent">Leadership</span>
           <span class="exp-item__date">May – Jun 2026</span>
         </div>
         <h3>Google Student Ambassador Program</h3>
@@ -970,6 +1001,19 @@ img { max-width: 100%; display: block; }
 
       <div class="card exp-item reveal">
         <div class="exp-item__meta">
+          <span class="tag">Organizer</span>
+          <span class="exp-item__date">24 Aug 2026</span>
+        </div>
+        <h3>Vishwakarma Awards 2026-27 — Orientation &amp; Innovation Session</h3>
+        <p class="exp-item__org">Tinkerers' Lab, Sanjivani University — with Maker Bhavan Foundation</p>
+        <ul class="exp-item__bullets">
+          <li>Organizing committee member, guided by Dr. Kiran Waghchaure (Lab Faculty)</li>
+          <li>150+ attendees across the Seminar Hall and Tinkerers' Lab (10th Floor) venues</li>
+        </ul>
+      </div>
+
+      <div class="card exp-item reveal">
+        <div class="exp-item__meta">
           <span class="tag">Industry</span>
           <span class="exp-item__date">2026</span>
         </div>
@@ -991,6 +1035,11 @@ img { max-width: 100%; display: block; }
     <h2 class="section__title reveal" data-split>Formal learning, logged</h2>
 
     <div class="cert-grid">
+      <div class="card cert-card reveal">
+        <h4>Innovation Sprint Hackathon 2026</h4><p class="cert-card__issuer">School of Engineering &amp; Technology (SET), Sanjivani University</p>
+        <p class="cert-card__desc">8-hour offline hackathon (ISH), 30 Jul 2026.</p>
+        <a href="https://veridex.csbc.co.in/verify/PGA-DDQVM29IJE" target="_blank" rel="noopener" class="cert-card__verify">Verify →</a>
+      </div>
       <div class="card cert-card reveal">
         <h4>Python Essentials 1</h4><p class="cert-card__issuer">Cisco Networking Academy / Python Institute</p>
         <p class="cert-card__desc">Core Python syntax, control flow, functions, and data structures.</p>
@@ -1054,6 +1103,13 @@ img { max-width: 100%; display: block; }
           <span class="tag">Community</span>
           <h3>Donation Drive &amp; Social Contribution</h3>
           <p>Volunteered with the Integrated M.Tech department's donation drive and social contribution initiatives — small-scale, done because it mattered, not for the resume line.</p>
+        </div>
+      </div>
+      <div class="card project reveal">
+        <div class="project__body">
+          <span class="tag tag--accent">Core Team</span>
+          <h3>Team Tinkerers' Lab</h3>
+          <p>Event Coordinator on a 10-person team that keeps the university's Tinkerers' Lab running — orientation sessions, innovation showcases, the infrastructure work behind the bigger events.</p>
         </div>
       </div>
       <div class="card project reveal">
